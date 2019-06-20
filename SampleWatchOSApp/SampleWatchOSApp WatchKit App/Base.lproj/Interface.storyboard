@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SampleWatchOSApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="4V9-5F-uuo">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="e3S-jz-Zux">
+                                    <items>
+                                        <label height="16" alignment="center" text="Artist" textAlignment="left" minimumScaleFactor="0.0" id="qVe-7A-r6A">
+                                            <fontDescription key="font" type="system" pointSize="15"/>
+                                        </label>
+                                        <label width="43" height="21" alignment="center" text="Song" textAlignment="left" id="omX-01-Hid">
+                                            <fontDescription key="font" type="system" pointSize="15"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group alignment="center" id="BnB-H0-t3k">
+                                    <items>
+                                        <button width="40" height="40" alignment="center" backgroundImage="Rewind" id="q1E-s2-zNU">
+                                            <variation key="device=watch38mm" width="40"/>
+                                            <variation key="device=watch42mm" width="44"/>
+                                        </button>
+                                        <button width="40" height="40" alignment="center" backgroundImage="Play" id="Pca-kg-MKK">
+                                            <variation key="device=watch38mm" width="40"/>
+                                            <variation key="device=watch42mm" width="44"/>
+                                            <connections>
+                                                <action selector="playBtnTapped" destination="AgC-eL-Hgc" id="1kw-ny-b53"/>
+                                            </connections>
+                                        </button>
+                                        <button width="40" height="40" alignment="center" backgroundImage="FastForwards" id="hfM-4T-hRX">
+                                            <variation key="device=watch38mm" width="40"/>
+                                            <variation key="device=watch42mm" width="44"/>
+                                        </button>
+                                    </items>
+                                </group>
+                                <slider alignment="center" verticalAlignment="bottom" value="1" maximum="3" steps="3" id="TVE-AQ-k33">
+                                    <connections>
+                                        <action selector="sliderAniamtion:" destination="AgC-eL-Hgc" id="Bif-GG-Ki8"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                            <variation key="device=watch38mm" spacing="15"/>
+                            <variation key="device=watch42mm" spacing="24"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="playBtnOutlet" destination="Pca-kg-MKK" id="cNu-Ni-aAd"/>
+                        <outlet property="volumeSliderOutlet" destination="TVE-AQ-k33" id="MUR-4Y-ZJI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="156" y="54.5"/>
+        </scene>
+    </scenes>
+</document>
